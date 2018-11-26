@@ -3,12 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>共享计算</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/Shared_computing.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
 </head>
 
 <body>
@@ -28,7 +29,17 @@
                     <!-- <li><a href="" >注册</a></li> -->
                 </ul>
             </nav>
+            <a href="javascript:;" class="rightBtn">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
         </header>
+        <ul class="navigitionUl" style="display:none;">
+            <li><a href="Sharedcomputing.html" >共享云计算</a> </li>
+            <li><a class="active" href="sharecomputingCloud.html">产品</a></li>
+            <li><a href="helpDoc.html">帮助与文档</a></li>
+            <li><a href="">登录</a></li>
+            <li><a href="" >注册</a></li>
+        </ul>
     </section>
     <div class="banner"></div>
     <div class="main">
@@ -104,3 +115,18 @@
 </body>
 
 </html>
+<script>
+    var btn = document.querySelector('.rightBtn');
+    var navigitionUl = document.querySelector('.navigitionUl');
+    var Flag  = true
+    btn.onclick=function(){
+        if(Flag){
+            navigitionUl.style.display='block'
+            Flag = false
+        }else{
+            navigitionUl.style.display='none'
+            Flag = true;
+        }
+        
+    }
+</script>
