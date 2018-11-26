@@ -5,7 +5,7 @@
     background:rgba(8,21,38,1);
 }
 .header{
-    width:70%;
+    width:60%;
     height:44px;
     margin: 0 auto;
    
@@ -14,21 +14,24 @@
 .left{
     float:left;
 }
+ .left .logo_link img{
+     margin-top:12px;
+ }
 .right{
     float:right;
    height:44px;
    line-height:44px;
 }
 .link{
-    
-    font-size:'苹方 中等';
-
     font-family: '苹方 中等';
     font-size:7px;
 }
 .link li {
-    margin:0 33px;
+    margin:0 16px;
     float:left;
+}
+.link li:nth-of-type(4){
+    margin-left:160px;
 }
 .link a{
    
