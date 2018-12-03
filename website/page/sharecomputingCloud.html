@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>共享计算平台-云代理</title>
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/sharedCloud.css">
+    <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
 </head>
 <body>
     <section class="sectionheader">
         <header class="header">
             <div class="left">
-                <a href="index.html">
-                    <img style="margin-top:12px;" src="../img/logo.png" alt="">
+                <a href="index.html" class="logo_link">
+                    <img  src="../img/logo.png" alt="">
                 </a>
             </div>
             <nav class="right">
@@ -22,11 +23,22 @@
                     <li><a href="Sharedcomputing.html" >共享云计算</a> </li>
                     <li><a class="active" href="sharecomputingCloud.html">产品</a></li>
                     <li><a href="helpDoc.html">帮助与文档</a></li>
-                    <li><a href="" style="margin-left:60px;">登录</a></li>
+                    <li><a href="">登录</a></li>
                     <li><a href="" >注册</a></li>
                 </ul>
             </nav>
+            <a href="javascript:;" class="rightBtn">
+                <i class="fa fa-bars fa-lg"></i>
+            </a>
+           
         </header>
+        <ul class="navigitionUl" style="display:none;">
+            <li><a href="Sharedcomputing.html" >共享云计算</a> </li>
+            <li><a class="active" href="sharecomputingCloud.html">产品</a></li>
+            <li><a href="helpDoc.html">帮助与文档</a></li>
+            <li><a href="">登录</a></li>
+            <li><a href="" >注册</a></li>
+        </ul>
     </section>
     <div class="main">
         <img class="bannerImg" src="../img/img1/banner.png" alt="">
@@ -97,4 +109,20 @@
         <P>杭州树熊云计算科技有限公司©2018浙公网安备33011002013648号</P>	    
     </footer>
 </body>
-</html>
+</html> 
+<script>
+    var btn = document.querySelector('.rightBtn');
+    var navigitionUl = document.querySelector('.navigitionUl');
+    var Flag  = true
+    btn.onclick=function(){
+        if(Flag){
+            navigitionUl.style.display='block'
+            Flag = false
+        }else{
+            navigitionUl.style.display='none'
+            Flag = true;
+        }
+        
+    }
+    
+</script>

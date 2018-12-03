@@ -5,7 +5,7 @@
     background:rgba(8,21,38,1);
 }
 .header{
-    width:70%;
+    width:60%;
     height:44px;
     margin: 0 auto;
    
@@ -14,21 +14,24 @@
 .left{
     float:left;
 }
+ .left .logo_link img{
+     margin-top:12px;
+ }
 .right{
     float:right;
    height:44px;
    line-height:44px;
 }
 .link{
-    
-    font-size:'苹方 中等';
-
     font-family: '苹方 中等';
     font-size:7px;
 }
 .link li {
-    margin:0 33px;
+    margin:0 16px;
     float:left;
+}
+.link li:nth-of-type(4){
+    margin-left:160px;
 }
 .link a{
    
@@ -50,7 +53,7 @@
     align-items: center;
 }
 .footer .qccode{
-    width:1000px;
+    width:100px;
     height:100px;
     margin:6px 0;
     background:url(../img/WechatIMG61@2x.png) center center no-repeat;
@@ -73,4 +76,38 @@
 .footer p:nth-of-type(3){
     color:#C8C8C8;
     font-size:7px;
+}
+@media screen and (max-width:767px){
+    .right{
+        display:none;
+    }
+    .header{
+        width:86%;
+    }
+    .rightBtn{
+        display:block;
+        color:#ccc;
+        float:right;
+        clear:none;
+        margin-top:12px;
+    }
+    .navigitionUl{
+        position: absolute;
+        z-index: 2;
+        background:rgba(0,0,0,0.6); 
+        width:100%;
+        
+    }
+    .navigitionUl li{
+        width:100%;
+        text-align:center;
+        border-bottom:solid 1px #ccc;
+    }
+    .navigitionUl li a {
+        color:#fff;
+        font-size:14px;
+        height:30px;
+        line-height:30px;
+        
+    }
 }
