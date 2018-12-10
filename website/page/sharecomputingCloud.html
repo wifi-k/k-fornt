@@ -5,41 +5,35 @@
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>共享计算平台-云代理</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/sharedCloud.css">
     <link rel="stylesheet" href="../font-awesome/css/font-awesome.css">
+   
 </head>
 <body>
     <section class="sectionheader">
-        <header class="header">
-            <div class="left">
-                <a href="index.html" class="logo_link">
-                    <img  src="../img/logo.png" alt="">
-                </a>
-            </div>
-            <nav class="right">
-                <ul class="link">
-                    <li><a href="Sharedcomputing.html" >共享云计算</a> </li>
-                    <li><a class="active" href="sharecomputingCloud.html">产品</a></li>
-                    <li><a href="helpDoc.html">帮助与文档</a></li>
-                    <li><a href="">登录</a></li>
-                    <li><a href="" >注册</a></li>
-                </ul>
-            </nav>
-            <a href="javascript:;" class="rightBtn">
-                <i class="fa fa-bars fa-lg"></i>
-            </a>
-           
-        </header>
-        <ul class="navigitionUl" style="display:none;">
-            <li><a href="Sharedcomputing.html" >共享云计算</a> </li>
-            <li><a class="active" href="sharecomputingCloud.html">产品</a></li>
-            <li><a href="helpDoc.html">帮助与文档</a></li>
-            <li><a href="">登录</a></li>
-            <li><a href="" >注册</a></li>
-        </ul>
-    </section>
+        <a class="navbar-brand" href="../index.html" class="logo_link">
+            <img  src="../img/logo.png" alt="">
+        </a>
+          <ul class="nav link">
+            <li class="nav-item ">
+              <a class="nav-link bg-color " href="../index.html">共享云计算</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-color active" href="sharecomputingCloud.html">产品</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link bg-color" href="./helpDoc.html">帮助与文档</a>
+            </li>
+            <li class="nav-item" style="margin-left:168px;">
+                <a class="nav-link bg-color" href="#">登录</a>
+              </li> <li class="nav-item">
+                  <a class="nav-link bg-color" href="#">注册</a>
+                </li>
+          </ul>
+</section>
     <div class="main">
         <img class="bannerImg" src="../img/img1/banner.png" alt="">
         <img class="zIndexImg" src="../img/img1/zIndexImg.png" alt="">
@@ -102,7 +96,6 @@
         <p class="docLink"><a href="">接入文档</a></p>
     </section>
     <footer class="footer">
-        <!-- <img class="qccode" src="../img/WechatIMG61.png" alt=""> -->
         <a href="" class="qccode"></a>
         <p>关注树熊云公众号</p>
         <p>浙江省杭州市余杭区人工智能小镇12幢809</p>
@@ -110,19 +103,3 @@
     </footer>
 </body>
 </html> 
-<script>
-    var btn = document.querySelector('.rightBtn');
-    var navigitionUl = document.querySelector('.navigitionUl');
-    var Flag  = true
-    btn.onclick=function(){
-        if(Flag){
-            navigitionUl.style.display='block'
-            Flag = false
-        }else{
-            navigitionUl.style.display='none'
-            Flag = true;
-        }
-        
-    }
-    
-</script>

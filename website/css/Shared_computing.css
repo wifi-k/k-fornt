@@ -11,7 +11,7 @@
     width:100%;
     position:relative;
     text-align:center;
-    padding:15px 0;
+    padding:15px 0 30px;
 }
 .main h2,.main2 h1{
     font-size:15px;
@@ -35,20 +35,84 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    
 }
 .main-img a{
     display:block;
-    width:556px;
-    height:596px;
+    width:699px;
+    height:355px;
     background:url(../img/main-img@2x.png) center center no-repeat;
-    background-size:cover;
+    background-size:contain;
+    position:relative;
    
+}
+.main-img a p{
+  position: absolute;
+  font-size:12px;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  line-height:16px;
+  text-align:center;
+}
+.main-img a p:nth-of-type(1){
+  width:113px;
+  height:13px;
+  top:181px;
+}
+.main-img a p:nth-of-type(2){
+  width:50px;
+  height:25px;
+  top:61px;
+  left:122px;
+}
+.main-img a p:nth-of-type(3){
+  width:50px;
+  height:25px;
+  top:146px;
+  left:122px;
+}
+.main-img a p:nth-of-type(4){
+  width:50px;
+  height:25px;
+  top:210px;
+  left:245px;
+}
+.main-img a p:nth-of-type(5){
+  width:40px;
+  height:25px;
+  top:210px;
+  left:374px;
+}
+.main-img a p:nth-of-type(6){
+  width:48px;
+  height:13px;
+  top:73px;
+  left:520px;
+}
+.main-img a p:nth-of-type(7){
+  width:61px;
+  height:25px;
+  top:146px;
+  left:509px;
+}
+.main-img a p:nth-of-type(8){
+  width:113px;
+  height:13px;
+  top:170px;
+  left:580px;
+}
+.main-img a p:nth-of-type(9){
+  width:68px;
+  height:13px;
+  top:359px;
+  left:304px;
 }
 
 /* ~~~~~~~~~~~~~~ */
 .Technologica{
     width:100%;
-    height:364px;
+    height:262px;
     background:rgba(8,21,38,1);
     padding:20px 0 ;
     position: relative;
@@ -69,7 +133,7 @@
 .Technologica ul li{
     float:left;
     width:33.3%;
-    padding:30px 0;
+    padding:26px 0 13px;
    
 }
 .Technologica ul li a{

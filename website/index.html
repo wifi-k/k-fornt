@@ -6,48 +6,52 @@
     <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>共享计算</title>
+    <link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/Shared_computing.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+   
 </head>
 
 <body>
     <section class="sectionheader">
-        <header class="header">
-            <div class="left">
-                <a href="index.html" class="logo_link">
-                    <img  src="img/logo.png" alt="">
-                </a>
-            </div>
-            <nav class="right">
-                <ul class="link">
-                    <li><a href="index.html" class="active">共享云计算</a> </li>
-                    <li><a href="../page/sharecomputingCloud.html">产品</a></li>
-                    <li><a href="../page/helpDoc.html">帮助与文档</a></li>
-                    <li><a href="">登录</a></li>
-                    <!-- <li><a href="" >注册</a></li> -->
-                </ul>
-            </nav>
-            <a href="javascript:;" class="rightBtn">
-                <i class="fa fa-bars fa-lg"></i>
+            <a class="navbar-brand" href="index.html" class="logo_link">
+                <img  src="img/logo.png" alt="">
             </a>
-        </header>
-        <ul class="navigitionUl" style="display:none;">
-            <li><a href="index.html" >共享云计算</a> </li>
-            <li><a class="active" href="../page/sharecomputingCloud.html">产品</a></li>
-            <li><a href="../page/helpDoc.html">帮助与文档</a></li>
-            <li><a href="">登录</a></li>
-            <li><a href="" >注册</a></li>
-        </ul>
+              <ul class="nav link">
+                <li class="nav-item ">
+                  <a class="nav-link bg-color active" href="index.html">共享云计算</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link bg-color" href="./page/sharecomputingCloud.html">产品</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link bg-color" href="./page/helpDoc.html">帮助与文档</a>
+                </li>
+                <li class="nav-item" style="margin-left:168px;">
+                    <a class="nav-link bg-color" href="#">登录</a>
+                  </li> <li class="nav-item">
+                      <a class="nav-link bg-color" href="#">注册</a>
+                    </li>
+              </ul>
     </section>
     <div class="banner"></div>
     <div class="main">
         <h2>项目简介</h2>
                 <h3></h3>
                 <div class="main-img">
-                    <!-- <img src="../img/main-img.png" alt=""> -->
-                    <a href=""></a>
+                    <a href="">
+                      <p>节点加入者</p>
+                      <p>获得树熊币奖励</p>
+                      <p>分享闲置资源</p>
+                      <p>获得共享计算能力</p>
+                      <p>加入开发平台</p>
+                      <p>获得服务</p>
+                      <p>使用树熊币进行购买</p>
+                      <p>产品使用文档</p>
+                      <p>开发者</p>
+                    </a>
                 </div>
     </div>
     <div class="Technologica">
@@ -106,7 +110,6 @@
             </div>
     </div>
     <footer class="footer">
-        <!-- <img class="qccode" src="../img/WechatIMG61.png" alt=""> -->
         <a href="" class="qccode"></a>
         <p>关注树熊云公众号</p>
         <p>浙江省杭州市余杭区人工智能小镇12幢809</p>
@@ -115,18 +118,3 @@
 </body>
 
 </html>
-<script>
-    var btn = document.querySelector('.rightBtn');
-    var navigitionUl = document.querySelector('.navigitionUl');
-    var Flag  = true
-    btn.onclick=function(){
-        if(Flag){
-            navigitionUl.style.display='block'
-            Flag = false
-        }else{
-            navigitionUl.style.display='none'
-            Flag = true;
-        }
-        
-    }
-</script>
