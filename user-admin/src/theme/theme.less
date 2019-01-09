@@ -1,0 +1,142 @@
+/*
+默认常规
+全局颜色、字体大小
+布局 布局命名，左中右 内部
+重新定义组件
+需要重新定义的组件  
+ */
+html {
+    font-family: -apple-system,PingFang SC,Hiragino Sans GB,Microsoft YaHei,Helvetica Neue,Arial,sans-serif;
+    word-break: break-word;
+    text-rendering: optimizeLegibility;
+    color: #333;
+}
+body{
+    margin: 0;
+}  
+/* ==== 布局 === */
+.fr {
+    float: right;
+}
+/* ==== 高亮颜色 === */
+@base: #30B6B9;
+@base__h: #5bd5d8;
+@base__9 :#999999;
+
+
+.grid-content {
+    border-radius: 4px;
+    min-height: 36px;
+    line-height: 36px;
+    color: #fff; text-indent: 10px;
+}
+.bg-purple-dark {
+    background: #99a9bf;
+}
+
+/* ==== 分页 === */
+.el-pager li.active {
+    border-color: @base;
+    background-color: @base;
+}
+.el-pager li:hover,.el-pagination .btn-next:hover, .el-pagination .btn-prev:hover {
+    color:@base;
+}
+.el-pager li.active:hover{
+    color:#fff;
+}
+.pageContainer {
+  float: right;
+  margin: 20px 0;
+}
+
+
+/* ==== form === */
+.el-form-item {
+    &.button-area {
+        margin-bottom: 10px;
+    }    
+}
+
+a {
+    color: @base;
+    text-decoration: none;
+    cursor:pointer;
+    &:hover {
+        color: @base__h;
+
+    }
+}
+.showError {
+    position: absolute; top: -18px; left: -50px;
+    padding-left: 50px;
+    color: #ff4949;
+}
+/* ==== button === */
+.el-button--primary {
+    background: @base;
+    border: none;   
+    font-size: 16px;
+    &:focus, &:hover {
+        background: @base__h;
+    }
+
+}
+.el-button--default.el-button:hover{
+    color: @base;
+    border-color: @base;
+}
+
+/* ==== icon === */
+.fa-times-circle {  
+    margin-right: 5px;
+    vertical-align: middle; font-size: 22px;
+}
+
+
+/* ====== reg ======*/
+.reg {
+    background: url(/static/img/reg_bg.png) repeat-x #0d1b2e;
+    .el-form-item__content {
+        color: @base__9;
+    }
+}
+
+.none {
+    display: none;
+}
+.myActive {
+    display: block;
+}
+
+
+.font14 {
+    font-size: 14px;
+    line-height: 200%
+}
+
+/* 内容提示 */
+.wrapper-nodata {
+    padding-top:80px;
+    text-align: center;
+}
+.wrapper-nodata .small {
+    font-size: 14px;
+    line-height: 200%;
+}
+    .smsBtn {
+        width: 110px; display: inline-block;
+        margin-left: 5px;
+        font-size: 13px;
+        .el-button+.el-button {
+            margin-left: 0;
+        }
+        .el-button--primary {
+            font-size: 14px;
+            height: 36px;
+        }
+    }
+    
+.captcha {
+    cursor:pointer
+}
