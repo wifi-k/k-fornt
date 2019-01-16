@@ -13,10 +13,10 @@ npm install
 npm run dev
 
 # build for production with minification
-npm run build
+npm run build    production目录为测试环境打包
 
 
 
 # run all tests
-npm run test
+npm run test  test目录为测试环境打包
 ```

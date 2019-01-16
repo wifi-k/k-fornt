@@ -30,8 +30,8 @@ module.exports = {
     },
   build: {
     env: process.env.NODE_ENV === 'test' ? require('./test.env') : require('./prod.env'),
-    index: path.resolve(__dirname, process.env.NODE_ENV === 'test' ?'../dist/index.html':'../dists/index.html'),
-    assetsRoot: path.resolve(__dirname, process.env.NODE_ENV === 'test'?'../dist/':'../dists/'),
+    index: path.resolve(__dirname, process.env.NODE_ENV === 'test' ?'../test/index.html':'../production/index.html'),
+    assetsRoot: path.resolve(__dirname, process.env.NODE_ENV === 'test'?'../test/':'../production/'),
     assetsSubDirectory: 'static',
     assetsPublicPath: '',
     productionSourceMap: false,
