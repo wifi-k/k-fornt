@@ -40,25 +40,23 @@ Vue.prototype.$token=function(){
   this.$router.push('/login');
   });
 }
-axios.interceptors.response.use( (response)=> {
-  if(response.hasOwnProperty("data") && typeof response.data == "object"){//是否还有data属性 并且 data是一个object
-      if(response.data.code === 1 || response.data.code ===2){// 登录超时 跳转至登录页面
-        Vms.$token()
-        Vms.$store.dispatch('remove_userinfo').then(() => {
-        Vms.$router.push('/login');})
-        return Promise.reject(response)
-      }else if (response.data.code === 0) {// 成功
-        return Promise.resolve(response)
-      }
-  } else {
-        return Promise.resolve(response)
-  }
+// axios.interceptors.response.use( (response)=> {
+//   if(response.hasOwnProperty("data") && typeof response.data == "object"){//是否还有data属性 并且 data是一个object
+//       if(response.data.code === 1 || response.data.code ===2){// 登录超时 跳转至登录页面
+//         Vms.$token()
+//         return Promise.reject(response)
+//       }else if (response.data.code === 0) {// 成功
+//         return Promise.resolve(response)
+//       }
+//   } else {
+//         return Promise.resolve(response)
+//   }
 
-}, function (error) {
-  // 请求取消 不弹出
-  // 请求错误时做些事
-  return Promise.reject(error)
-})
+// }, function (error) {
+//   // 请求取消 不弹出
+//   // 请求错误时做些事
+//   return Promise.reject(error)
+// })
 
 
 

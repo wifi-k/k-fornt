@@ -175,7 +175,9 @@ let self = {};
                     type: 'success'
                   });
                 }else{
-                 
+                  if(res.data.code == 1 || res.data.code ==2){
+                     self.$token()
+                }
                 }
             })
           }else {
@@ -220,7 +222,9 @@ let self = {};
                   type:'success',
                   duration:1500
                 })
-              }else {
+              }else if(p.data.code== 1 || p.data.code==2){
+                  self.$token()
+              }else{
                 self.$notify({
                   title:'失败',
                   message:`${p.data.msg}`,
@@ -273,6 +277,9 @@ let self = {};
               }
       }
       self.$emit('selfStatus',self.statusText)//将审核状态传到父组件 pereson.vue
+      if(res.data.code==1 ||　res.data.code==2){//token过期跳转到登录
+           self.$token()
+      }
     })
     },
     beforeCreate(){

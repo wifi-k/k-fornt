@@ -43,8 +43,11 @@ module.exports = require('./leftMenu');
 
 
 .el-menu-item:first-child i,
-.el-menu-item:nth-child(2) i
- {
+.el-menu-item:nth-child(2) i,
+.el-menu-item:nth-child(3) i,
+.el-menu-item:nth-child(4) i,
+.el-menu-item:nth-child(5) i,
+.el-menu-item:nth-child(6) i {
   vertical-align: middle;
   width: 24px;
   height: 24px;
@@ -54,6 +57,9 @@ module.exports = require('./leftMenu');
 }
 
 .el-menu-item:first-child i {
+  background-position: 0px -72px
+}
+.el-menu-item:nth-child(2) {
   background-position: 0px -170px
 }
 

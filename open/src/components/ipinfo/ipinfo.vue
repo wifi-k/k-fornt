@@ -83,18 +83,21 @@ export default {
               self.total = record.total; 
               self.tableData = lists;
               self.loading = false; 
-            }else{
-             this.$notify({
-                title:"错误",
-                message:`${res.data.msg}`,
-                type:'error',
-                duration: 1500
+            }else  
+              if(res.data.code == 1 || res.data.code ==2){
+                  self.$token()
+                }else{
+                  this.$notify({
+                  title:"错误",
+                  message:`${res.data.msg}`,
+                  type:'error',
+                  duration: 1500
               });
         }
       });
     },
     timechange(val) {
-      console.log(val);
+      // console.log(val);
       // console.log("change");
       self.param.startTime = val[0];
       self.param.endTime = val[1];
