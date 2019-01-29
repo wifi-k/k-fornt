@@ -10,5 +10,6 @@ module.exports = {
     Register: resolve => require(['./register/register.vue'],resolve),
     Email: resolve => require(['./email/email.vue'],resolve),
     Forget: resolve => require(['./forget/forget.vue'],resolve),
-    authentication:resolve=>require(['./Authentication/apply.vue'],resolve)
+    authentication:resolve=>require(['./Authentication/apply.vue'],resolve),
+    IPinfo:resolve=>require(['./ipinfo/ipinfo.vue'],resolve)
 };

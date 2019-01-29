@@ -1,6 +1,6 @@
 <template>
      <el-container>
-       <el-header  class="el-header">
+       <el-header  class="el-header" height='50'>
          <head-nav></head-nav>
        </el-header>
        <el-container>
@@ -16,6 +16,7 @@
 <style lang="less" scoped>
 .el-header{
   padding:0;
+ 
 }
 
 </style>

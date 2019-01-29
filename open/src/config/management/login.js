@@ -57,9 +57,13 @@ export default {
     GetTokenqiniu(param){//获取七牛云token
       return  Vue.axios.post(''+$http+'/user/qiniu/get')
     },
-    GetapplyResult(param){//获取七牛云token
-      return  Vue.axios.post(''+$http+'user/personal/get')
-    }
+    GetapplyResult(param){//获取审核结果照片
+      return  Vue.axios.post(''+$http+'/user/personal/get')
+    },
+    HttpproxyList(param){//查询HttpProxy调用记录
+      return  Vue.axios.post(''+$http+'/httpproxy/record/list',param)
+    },
+     
     
 
 
