@@ -49,7 +49,7 @@ export default new Router({
         }]
       },
       {
-        name: '调用记录',
+        name: '代理记录',
         path: '/management/IPinfo',
         component: ChildMain,
         children: [{

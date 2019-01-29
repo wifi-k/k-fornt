@@ -1,7 +1,7 @@
 <template>
   <div>
     <el-row>
-       <el-input size="small" style="width:180px;" v-model="inputid" placeholder="输入id查询调用记录"></el-input>
+       <el-input size="small" style="width:260px;" v-model="inputid" placeholder="输入id查询代理记录"></el-input>
          <el-button size="small" @click="search" type="primary"><i class="el-icon-search"></i></el-button>
         <div style="display:inline-block;margin-left:20px;">
           <span class="demonstration"></span>
