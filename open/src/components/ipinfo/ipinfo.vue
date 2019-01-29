@@ -61,12 +61,7 @@ export default {
     self = this;
   },
   mounted() {
-    // self.getHttpList(self.param) 
-    
-    // console.log(new Date().getTime())
-    // console.log(new Date().getTime()-86400)
-    self.param.startTime = new Date().getTime()-86400000
-    self.param.endTime=new Date().getTime()
+    self.settimevalue()
   },
   methods: {
     getHttpList(param) {
@@ -83,6 +78,7 @@ export default {
               self.total = record.total; 
               self.tableData = lists;
               self.loading = false; 
+              self.settimevalue()
             }else  
               if(res.data.code == 1 || res.data.code ==2){
                   self.$token()
@@ -97,12 +93,12 @@ export default {
       });
     },
     timechange(val) {
-      // console.log(val);
-      // console.log("change");
-      self.param.startTime = val[0];
-      self.param.endTime = val[1];
-      self.param.id=''
-      self.getHttpList(self.param);
+     if(val){
+        self.param.startTime = val[0];
+        self.param.endTime = val[1];
+        self.param.id=''
+        self.getHttpList(self.param);
+     }
     },
     search(){
       // console.log(self.inputid)
@@ -113,7 +109,11 @@ export default {
      handleCurrentChange(e){
           self.param.pageNo = e// 点击分页显示对应分页内容
           // self.getList(self.param)
-        },
+    },
+    settimevalue(){
+        self.param.startTime = new Date().getTime()-86400000
+        self.param.endTime=new Date().getTime()
+    }
   }
 };
 </script>
