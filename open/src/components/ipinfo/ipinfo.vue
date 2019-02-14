@@ -115,8 +115,9 @@ export default {
 
     },
      handleCurrentChange(e){
+          console.log(e)
           self.param.pageNo = e// 点击分页显示对应分页内容
-          // self.getList(self.param)
+          self.getHttpList(self.param)
     },
     settimevalue(){
         self.param.startTime = new Date().getTime()-86400000
