@@ -24,7 +24,7 @@
            <el-table-column label="请求地址" width="auto">
                 <template slot-scope="user">
                   <p>
-                    <span v-show="user.row.reqScheme">{{user.row.reqScheme}}://</span><span v-show="user.row.reqHost">{{user.row.reqHost}}</span><span v-show="user.row.reqPort!=80">:{{user.row.reqPort}}</span><span v-show="user.row.reqPath">/{{user.row.reqPath}}</span><span v-show="user.row.reqQuery">?{{user.row.reqQuery}}</span>
+                    <span v-show="user.row.reqScheme">{{user.row.reqScheme}}://</span><span v-show="user.row.reqHost">{{user.row.reqHost}}</span><span v-show="user.row.reqPort!=80">:{{user.row.reqPort}}</span><span v-show="user.row.reqPath">{{user.row.reqPath}}</span>
                   </p>     
                   <!-- reqScheme://reqHost:reqPort/reqPath?reqQuery  -->
                 </template>
@@ -74,7 +74,6 @@ export default {
     getHttpList(param) {
       self.loading = true
       Login.HttpproxyList(param).then(res => {
-
         if(res.data.code == 0){
               let record = res.data.data;
               let lists = record.page;   
