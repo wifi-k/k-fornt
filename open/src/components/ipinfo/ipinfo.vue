@@ -1,12 +1,12 @@
 <template>
   <div>
     <el-row>
-       <el-input size="small" style="width:260px;" v-model="inputid" placeholder="输入id查询代理记录"></el-input>
-         <el-button size="small" @click="search" type="primary"><i class="el-icon-search"></i></el-button>
+       <el-input size="" style="width:260px;" v-model="inputid" placeholder="输入id查询代理记录"></el-input>
         <div style="display:inline-block;margin-left:20px;">
-          <span class="demonstration"></span>
+
+          <!-- <span class="demonstration">时间范围查询:</span> -->
           <el-date-picker
-            size="small"
+            size=""
             v-model="value1"
             type="daterange"
             value-format="timestamp"
@@ -16,17 +16,15 @@
             end-placeholder="结束日期"
           ></el-date-picker>
         </div>
-        
+        <el-button size="" @click="search" type="primary"><i class="el-icon-search"></i></el-button>        
     </el-row>
-    <el-row style="margin-top:15px;">
-      
-        <el-table :data="tableData" v-loading="loading"  stripe >
+    <el-row style="margin-top:25px;">
+        <el-table :data="tableData" v-loading="loading"  stripe border>
            <el-table-column v-for="(table,index) in tableList" :label="table.label" :prop="table.prop" :width="table.width" :key="index" align="center"></el-table-column>
         </el-table>
-         <div class="pageContainer">
+        <div class="pageContainer">
               <el-pagination @current-change="handleCurrentChange" :current-page="current_page" :page-size="page_size" layout="total,prev,pager,next ,jumper" :page-count="total_page" :total="total"></el-pagination>
-          </div>
-      
+        </div>
     </el-row>
   </div>
 </template>
