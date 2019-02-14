@@ -1,10 +1,10 @@
 <template>
   <div>
     <el-row>
-      <span class="demonstration">ID查询：</span>
-       <el-input size="" style="width:260px;" v-model="inputid" placeholder="请输入id查询代理记录"></el-input>
+      <span class="demonstration">ID：</span>
+       <el-input size="" style="width:260px;" v-model="inputid" placeholder="请输入id"></el-input>
         <div style="display:inline-block;margin-left:20px;">
-          <span class="demonstration">时间范围查询：</span>
+          <span class="demonstration">时间范围：</span>
           <el-date-picker
             size=""
             v-model="value1"
@@ -12,8 +12,8 @@
             value-format="timestamp"
             range-separator="-"
             @change="timechange"
-            start-placeholder="开始日期"
-            end-placeholder="结束日期"
+            :start-placeholder="new Date().format('yyyy-MM-dd ')"            
+            :end-placeholder="new Date().format('yyyy-MM-dd ')"
           ></el-date-picker>
         </div>
         <el-button size="" @click="search" type="primary"><i class="el-icon-search"></i></el-button>        
@@ -21,6 +21,15 @@
     <el-row style="margin-top:25px;">
         <el-table :data="tableData" v-loading="loading"  stripe >
            <el-table-column v-for="(table,index) in tableList" :label="table.label" :prop="table.prop" :width="table.width" :key="index" align="center"></el-table-column>
+           <el-table-column label="请求地址" width="auto">
+                <template slot-scope="user">
+                  <p>
+                    <span v-show="user.row.reqScheme">{{user.row.reqScheme}}://</span><span v-show="user.row.reqHost">{{user.row.reqHost}}</span><span v-show="user.row.reqPort!=80">:{{user.row.reqPort}}</span><span v-show="user.row.reqPath">/{{user.row.reqPath}}</span><span v-show="user.row.reqQuery">?{{user.row.reqQuery}}</span>
+                  </p>     
+                  <!-- reqScheme://reqHost:reqPort/reqPath?reqQuery  -->
+                </template>
+           </el-table-column>
+            
         </el-table>
         <div class="pageContainer">
               <el-pagination @current-change="handleCurrentChange" :current-page="current_page" :page-size="page_size" layout="total,prev,pager,next ,jumper" :page-count="total_page" :total="total"></el-pagination>
@@ -37,7 +46,7 @@ import Table from './table';
 export default {
   data() {
     return {
-        inputid:"",
+       inputid:"",
        page_size:10,
        total_page:0,
        total: 0,
@@ -91,6 +100,7 @@ export default {
       });
     },
     timechange(val) {
+      // console.log(val[0])
      if(val){
         self.param.startTime = val[0];
         self.param.endTime = val[1];
