@@ -1,10 +1,10 @@
 <template>
   <div>
     <el-row>
-       <el-input size="" style="width:260px;" v-model="inputid" placeholder="输入id查询代理记录"></el-input>
+      <span class="demonstration">ID查询：</span>
+       <el-input size="" style="width:260px;" v-model="inputid" placeholder="请输入id查询代理记录"></el-input>
         <div style="display:inline-block;margin-left:20px;">
-
-          <!-- <span class="demonstration">时间范围查询:</span> -->
+          <span class="demonstration">时间范围查询：</span>
           <el-date-picker
             size=""
             v-model="value1"
@@ -19,7 +19,7 @@
         <el-button size="" @click="search" type="primary"><i class="el-icon-search"></i></el-button>        
     </el-row>
     <el-row style="margin-top:25px;">
-        <el-table :data="tableData" v-loading="loading"  stripe border>
+        <el-table :data="tableData" v-loading="loading"  stripe >
            <el-table-column v-for="(table,index) in tableList" :label="table.label" :prop="table.prop" :width="table.width" :key="index" align="center"></el-table-column>
         </el-table>
         <div class="pageContainer">
