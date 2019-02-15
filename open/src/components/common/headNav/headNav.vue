@@ -2,7 +2,7 @@
     <div class="head-nav">
         <el-row>
             <el-col :span="6" class="title">
-              <p>树熊云开放平台</p>
+              树熊云开放平台
             </el-col>
             <el-col :span="12" class="user-container" > 
                 <i class="fa fa-power-off logout" @click='logout'></i>
@@ -37,8 +37,9 @@
     .title{
       color:#fff;
       text-align:left;
-      font-size:14px;
       margin-left: 20px;
+      font-size:18px;
+      line-height:50px;
     }
     .nav-container  {
         width: 360px;

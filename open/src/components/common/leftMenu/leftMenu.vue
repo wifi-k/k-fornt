@@ -2,7 +2,7 @@
   <div class="left-menu" :style="getHeight" ref="leftMenu">
     <!--走自己配置的router-->
     <el-menu router>
-    <router-link v-for="(route,index) in $router.options.routes[4].children"  :data-en="route.eName" :to="route.path" active-class= "is-active" class="el-menu-item" tag = "li" :key="index"><i></i> {{route.name}} </router-link>	 			    
+        <router-link v-for="(route,index) in $router.options.routes[4].children"  :data-en="route.eName" :to="route.path" active-class= "is-active" class="el-menu-item" tag = "li" :key="index"><i></i> {{route.name}} </router-link>	 			    
     </el-menu>
     <!--Vuex-->
   </div>

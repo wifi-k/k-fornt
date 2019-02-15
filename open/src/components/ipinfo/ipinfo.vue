@@ -19,17 +19,23 @@
         <el-button size="" @click="search" type="primary"><i class="el-icon-search"></i></el-button>        
     </el-row>
     <el-row style="margin-top:25px;">
-        <el-table :data="tableData" v-loading="loading"  stripe >
-           <el-table-column v-for="(table,index) in tableList" :label="table.label" :prop="table.prop" :width="table.width" :key="index" align="center"></el-table-column>
-           <el-table-column label="请求地址" width="auto">
+        <el-table :data="tableData" v-loading="loading"  stripe fit>
+          
+           <el-table-column label="请求时间" width="200" prop="reqTime" align="center"></el-table-column>
+            <el-table-column label="请求地址" align="center">
                 <template slot-scope="user">
                   <p>
                     <span v-show="user.row.reqScheme">{{user.row.reqScheme}}://</span><span v-show="user.row.reqHost">{{user.row.reqHost}}</span><span v-show="user.row.reqPort!=80">:{{user.row.reqPort}}</span><span v-show="user.row.reqPath">{{user.row.reqPath}}</span>
                   </p>     
                   <!-- reqScheme://reqHost:reqPort/reqPath?reqQuery  -->
                 </template>
-           </el-table-column>
-            
+           </el-table-column>           
+           <el-table-column label="响应状态码" width="100" prop="rspCode" align="center"></el-table-column>           
+           <el-table-column label="响应结果" width="140" prop="rspReason" align="center"></el-table-column>
+           <el-table-column label="请求方式" width="100" prop="reqMethod" align="center"></el-table-column>
+           <el-table-column label="ID" prop="id" align="center"></el-table-column>
+          
+          
         </el-table>
         <div class="pageContainer">
               <el-pagination @current-change="handleCurrentChange" :current-page="current_page" :page-size="page_size" layout="total,prev,pager,next ,jumper" :page-count="total_page" :total="total"></el-pagination>
@@ -69,6 +75,7 @@ export default {
   },
   mounted() {
     self.settimevalue()
+    self.getHttpList(self.param);
   },
   methods: {
     getHttpList(param) {
