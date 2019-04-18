@@ -8,6 +8,7 @@
           <left-menu></left-menu>
        </el-aside>
         <el-main>
+           <!-- <router-link :to="$route.path" tag="a"> /{{$route.name}} </router-link> -->
            <router-view></router-view>
         </el-main>
        </el-container>
@@ -29,6 +30,9 @@
         name:'home',
         components:Common,
         computed:{},
-        mounted(){}
+        mounted(){
+          
+        },
+        
     }
 </script>

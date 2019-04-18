@@ -29,13 +29,11 @@
                   </p>     
                   <!-- reqScheme://reqHost:reqPort/reqPath?reqQuery  -->
                 </template>
-           </el-table-column>           
-           <el-table-column label="响应状态码" width="100" prop="rspCode" align="center"></el-table-column>           
+           </el-table-column>
+           <el-table-column label="请求方式" width="100" prop="reqMethod" align="center"></el-table-column>   
+           <el-table-column label="响应状态码" width="100" prop="rspCode" align="center"></el-table-column>
            <el-table-column label="响应结果" width="140" prop="rspReason" align="center"></el-table-column>
-           <el-table-column label="请求方式" width="100" prop="reqMethod" align="center"></el-table-column>
            <el-table-column label="ID" prop="id" align="center"></el-table-column>
-          
-          
         </el-table>
         <div class="pageContainer">
               <el-pagination @current-change="handleCurrentChange" :current-page="current_page" :page-size="page_size" layout="total,prev,pager,next ,jumper" :page-count="total_page" :total="total"></el-pagination>

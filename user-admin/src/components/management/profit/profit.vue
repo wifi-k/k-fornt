@@ -19,7 +19,7 @@
             
         </div>
         <div id="homeChart" style="height: 400px; margin-top: 20px;"></div>
-        </div>
+        
 
         
     </el-row>

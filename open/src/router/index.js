@@ -53,7 +53,7 @@ export default new Router({
         path: '/management/IPinfo',
         component: ChildMain,
         children: [{
-          name: '调用记录s',
+          name: '调用记录',
           eName: 'http_proxy',
           path: '/management/IPinfo',
           component: IPinfo,

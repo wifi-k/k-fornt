@@ -219,7 +219,7 @@ export default {
         }else{
             self.rules.checked = checkedString
         }
-
+        
         self.setSize();
         self.refreshCaptcha();
         window.onresize = function () {

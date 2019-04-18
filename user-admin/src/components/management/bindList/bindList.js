@@ -90,9 +90,10 @@ export default {
                           }
 
                     });          
+                  console.log(record)
                     this.total = record.count; 
-                    this.total_page = record.pages;
-                    this.current_page = record.pageNum;
+                    // this.total_page = record.pages;
+                    // this.current_page = record.pageNum;
                     this.tableData = lists;
                     this.loading = false;
                    
