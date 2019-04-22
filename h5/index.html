@@ -26,9 +26,11 @@
 <script src="js/jquery.min.js"></script>
 <script src='js/clipboard.min.js'></script>
 <script>
+  //https://www.treebear.cn/?from=groupmessage&isappinstalled=0&inviteCode=2222
   $(document).ready(function(){
-    const inviteCode = window.location.search.split('?inviteCode=')[1];
-    // console.log(window.location.search)
+    const inviteCode = window.location.search.split('&inviteCode=')[1] ;
+    console.log(window.location.search)
+    // console.log(inviteCode)
     $('.copyText').text(inviteCode)
   })
   var clipboard = new ClipboardJS('.copybtn');
