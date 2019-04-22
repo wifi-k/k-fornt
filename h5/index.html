@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>小k家庭码</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <script src="js/ydui.flexible.js"></script>
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+  <section class="section">
+    <h2>复制家庭码后打开小k云管家APP即可加入</h2>
+    <div class="copyText">58702423</div>
+    <button data-clipboard-action="copy" data-clipboard-target="div" class="copybtn">复制</button>
+    <a class="downloadBtn" href="javascript:;">下载小k云管家APP</a>
+  </section>
+</body>
+
+</html>
+<script src="js/jquery.min.js"></script>
+<script src='js/clipboard.min.js'></script>
+<script>
+  $(document).ready(function(){
+    const inviteCode = window.location.search.split('?inviteCode=')[1];
+    // console.log(window.location.search)
+    $('.copyText').text(inviteCode)
+  })
+  var clipboard = new ClipboardJS('.copybtn');
+    clipboard.on('success', function(e) {
+        // console.log(e);
+        // alert('复制成功')
+    });
+    clipboard.on('error', function(e) {
+        // console.log(e);
+    });
+
+</script>

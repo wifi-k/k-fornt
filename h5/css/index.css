@@ -1,0 +1,57 @@
+.section {
+  width: 100%;
+  height: 100%;
+  display:flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items:center  ;
+}
+
+.section h2 {
+  text-align: center;
+  font-size: .24rem;
+  font-family: PingFangSC-Regular;
+  font-weight: 400;
+  color: rgba(115, 131, 162, 1);
+  line-height: 36px;
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+
+.section p {
+  text-align: center;
+  font-size: .96rem;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  color: rgba(71, 213, 237, 1);
+  line-height: 1.34rem;
+  margin-top:.62rem;
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+}
+.copybtn{
+  width:2.22rem;
+  height:.82rem;
+  background:none;
+  border:1px solid rgba(236,236,236,1);
+  text-align:center;
+  border-radius:5px;
+  line-height:.82rem;
+  font-size:.34rem;
+  font-family:PingFangSC-Regular;
+  font-weight:400;
+  color:rgba(115,131,162,1);
+  margin-top:.74rem;
+}
+.downloadBtn{
+  width:4.96rem;
+height:.88rem;
+background:linear-gradient(90deg,rgba(55,237,163,1) 0%,rgba(26,208,205,1) 100%);
+font-size:.36rem;
+text-align:center;
+font-family:PingFang-SC-Bold;
+font-weight:bold;
+color:rgba(255,255,255,1);
+line-height:.88rem;
+margin-top:2.56rem;
+}
